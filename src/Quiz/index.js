@@ -8,6 +8,7 @@ class Quiz extends React.Component {
     state = {
         score: 0,
         selectedOption: null,
+
     };
     question = {
         'text': "Who is current PM of India?",
@@ -16,8 +17,13 @@ class Quiz extends React.Component {
     };
     selectThis = (id) => {
         console.log(`updating selectedOption to ${id}`);
+        let newScore=this.state.score;;
+        if(id===this.question.correct_choice){
+            newScore=newScore+10;
+        }
         this.setState({
             selectedOption: id,
+            score: newScore
         });
     }
 
