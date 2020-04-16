@@ -27,10 +27,10 @@ class Quiz extends React.Component {
                 <div className="score">Score: {this.state.score}</div>
                 <Question questionText={this.question.text}/>
                 <div className="options-container">
-                    <Option text={'Narendra Modi'} id={0} isCorrect={true} clicked={this.selectThis} selected={this.state.selectedOption===0}/>
-                    <Option text={'Rahul Gandhi'} id={1} isCorrect={false} clicked={this.selectThis} selected={this.state.selectedOption===1} />
-                    <Option text={'Manmohan Singh'} id={2} isCorrect={false} clicked={this.selectThis} selected={this.state.selectedOption===2} />
-                    <Option text={'Sonia Gandhi'} id={3} isCorrect={false} clicked={this.selectThis} selected={this.state.selectedOption===3} />
+                    <Option text={this.question.options[0]} id={0} isCorrect={this.question.isCorrect===0} clicked={this.selectThis} selected={this.state.selectedOption===0}/>
+                    <Option text={this.question.options[1]} id={1} isCorrect={this.question.isCorrect===1} clicked={this.selectThis} selected={this.state.selectedOption===1} />
+                    <Option text={this.question.options[2]} id={2} isCorrect={this.question.isCorrect===2} clicked={this.selectThis} selected={this.state.selectedOption===2} />
+                    <Option text={this.question.options[3]} id={3} isCorrect={this.question.isCorrect===3} clicked={this.selectThis} selected={this.state.selectedOption===3} />
                 </div>
             </div>
         );
