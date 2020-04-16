@@ -8,6 +8,7 @@ class Quiz extends React.Component {
     state = {
         score: 0,
         selectedOption: null,
+        questionAnswered:false
 
     };
     question = {
@@ -16,15 +17,18 @@ class Quiz extends React.Component {
         'correct_choice': 0
     };
     selectThis = (id) => {
-        console.log(`updating selectedOption to ${id}`);
-        let newScore=this.state.score;;
-        if(id===this.question.correct_choice){
-            newScore=newScore+10;
+        if(!this.state.questionAnswered){
+            console.log(`updating selectedOption to ${id}`);
+            let newScore=this.state.score;;
+            if(id===this.question.correct_choice){
+                newScore=newScore+10;
+            }
+            this.setState({
+                selectedOption: id,
+                score: newScore,
+                questionAnswered:true
+            });
         }
-        this.setState({
-            selectedOption: id,
-            score: newScore
-        });
     }
 
     render() {
