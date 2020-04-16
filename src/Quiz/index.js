@@ -6,8 +6,16 @@ import './styles.css';
 
 class Quiz extends React.Component {
     state = {
-        score: 0
+        score: 0,
+        selectedOption:null,
     };
+
+    selectThis=(id)=>{
+        console.log(`updating selectedOption to ${id}`);
+        this.setState({
+            selectedOption:id,
+        });
+    }
 
     render() {
         return (
@@ -15,10 +23,10 @@ class Quiz extends React.Component {
                 <div className="score">Score: {this.state.score}</div>
                 <Question/>
                 <div className="options-container">
-                    <Option text={'Narendra Modi'} isCorrect={true}/>
-                    <Option text={'Rahul Gandhi'} isCorrect={false}/>
-                    <Option text={'Manmohan Singh'} isCorrect={false}/>
-                    <Option text={'Sonia Gandhi'} isCorrect={false}/>
+                    <Option text={'Narendra Modi'} id={0} isCorrect={true} clicked={this.selectThis} selected={this.state.selectedOption===0}/>
+                    <Option text={'Rahul Gandhi'} id={1} isCorrect={false} clicked={this.selectThis} selected={this.state.selectedOption===1} />
+                    <Option text={'Manmohan Singh'} id={2} isCorrect={false} clicked={this.selectThis} selected={this.state.selectedOption===2} />
+                    <Option text={'Sonia Gandhi'} id={3} isCorrect={false} clicked={this.selectThis} selected={this.state.selectedOption===3} />
                 </div>
             </div>
         );
