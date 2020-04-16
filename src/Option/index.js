@@ -9,7 +9,7 @@ export default function Option(props) {
     }
     return (
         <div onClick={printOption}
-            className={selected?"correct-option option":'option'}>
+            className={props.text==="Narendra Modi"?selected?"correct-option option":'option':selected?"wrong-option option":'option'}>
             {props.text}
         </div>
     )

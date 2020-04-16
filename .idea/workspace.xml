@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dbf23a4-8187-4387-8990-bdbde095f535" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Option/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587010079556</updated>
-      <workItem from="1587010080737" duration="3051000" />
+      <workItem from="1587010080737" duration="3333000" />
     </task>
     <task id="LOCAL-00001" summary="printing option text onclicking div">
       <created>1587012115162</created>
@@ -85,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587012115162</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changing color on click">
+      <created>1587013683586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587013683586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,17 +110,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="printing option text onclicking div" />
-    <option name="LAST_COMMIT_MESSAGE" value="printing option text onclicking div" />
+    <MESSAGE value="changing color on click" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing color on click" />
   </component>
   <component name="WindowStateProjectService">
     <state x="419" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587010837905">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="419" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1587010837905" />
-    <state x="850" y="35" key="CommitChangelistDialog2" timestamp="1587012115067">
+    <state x="850" y="35" key="CommitChangelistDialog2" timestamp="1587013683517">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="850" y="35" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1587012115067" />
+    <state x="850" y="35" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1587013683517" />
     <state x="798" y="266" key="EnvironmentVariablesDialog" timestamp="1587010834581">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
