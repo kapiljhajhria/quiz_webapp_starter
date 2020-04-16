@@ -15,10 +15,10 @@ class Quiz extends React.Component {
                 <div className="score">Score: {this.state.score}</div>
                 <Question/>
                 <div className="options-container">
-                    <Option text={'Narendra Modi'}/>
-                    <Option text={'Rahul Gandhi'}/>
-                    <Option text={'Manmohan Singh'}/>
-                    <Option text={'Sonia Gandhi'}/>
+                    <Option text={'Narendra Modi'} isCorrect={true}/>
+                    <Option text={'Rahul Gandhi'} isCorrect={false}/>
+                    <Option text={'Manmohan Singh'} isCorrect={false}/>
+                    <Option text={'Sonia Gandhi'} isCorrect={false}/>
                 </div>
             </div>
         );
