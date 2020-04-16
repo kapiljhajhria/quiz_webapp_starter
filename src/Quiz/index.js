@@ -9,7 +9,11 @@ class Quiz extends React.Component {
         score: 0,
         selectedOption:null,
     };
-
+    question = {
+        'text': "Who is current PM of India?",
+        'options': ['Narendra Modi', 'Rahul Gandhi', 'Manmohan Singh', 'Sonia Gandhi'],
+        'correct_choice': 0
+    };
     selectThis=(id)=>{
         console.log(`updating selectedOption to ${id}`);
         this.setState({
@@ -21,7 +25,7 @@ class Quiz extends React.Component {
         return (
             <div className="header">
                 <div className="score">Score: {this.state.score}</div>
-                <Question/>
+                <Question questionText={this.question.text}/>
                 <div className="options-container">
                     <Option text={'Narendra Modi'} id={0} isCorrect={true} clicked={this.selectThis} selected={this.state.selectedOption===0}/>
                     <Option text={'Rahul Gandhi'} id={1} isCorrect={false} clicked={this.selectThis} selected={this.state.selectedOption===1} />
