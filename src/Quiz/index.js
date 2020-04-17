@@ -74,6 +74,15 @@ class Quiz extends React.Component {
     }
     question;
 
+    moveToNextQuestion() {
+        let copyCurrentQuestionIndex = this.state.currentQuestionIndex;
+        if (copyCurrentQuestionIndex < this.questions.length)
+            copyCurrentQuestionIndex = copyCurrentQuestionIndex + 1;
+        this.setState({
+            currentQuestionIndex: copyCurrentQuestionIndex,
+        });
+    }
+
     render() {
         if (this.state.currentQuestionIndex < this.questions.length - 1)
             this.question = this.questions[this.state.currentQuestionIndex];
@@ -91,7 +100,7 @@ class Quiz extends React.Component {
                     <Option text={this.question.options[3]} id={3} isCorrect={this.question.correct_choice === 3}
                             clicked={this.selectThis} selected={this.state.selectedOption === 3}/>
                 </div>
-                <ProgressBar/>
+                <ProgressBar moveToNextQuestion={() => this.moveToNextQuestion()}/>
             </div>
         );
     }
