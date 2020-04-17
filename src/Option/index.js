@@ -9,6 +9,7 @@ export default function Option(props) {
         <div onClick={() => props.clicked(props.id)}
 
              className={props.isCorrect ? (props.selected ? "correct-option option" : 'option') : (props.selected ? "wrong-option option" : 'option')}>
+            <Confetti active={ props.isCorrect && props.selected } />
             {props.text}
 
         </div>
