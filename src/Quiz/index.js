@@ -2,6 +2,7 @@ import React from "react";
 import Question from "../Question";
 import Option from "../Option";
 import './styles.css';
+import ProgressBar from "../ProgressBar";
 
 
 class Quiz extends React.Component {
@@ -90,6 +91,7 @@ class Quiz extends React.Component {
                     <Option text={this.question.options[3]} id={3} isCorrect={this.question.correct_choice === 3}
                             clicked={this.selectThis} selected={this.state.selectedOption === 3}/>
                 </div>
+                <ProgressBar/>
             </div>
         );
     }

@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "gh-pages": "^2.2.0",
+    "progressbar.js": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-dom-confetti": "^0.1.3",
