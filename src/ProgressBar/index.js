@@ -1,45 +1,52 @@
 import React, {useEffect, useState} from "react";
 import './styles.css';
+import props from "../Quiz";
 
 
-export default function ProgressBar(props) {
-    const [width, setwidth] = useState(100);
-    const [backgroundColor, setBackgroundColor] = useState("green");
-    const startProgressBar = () => {
-        let deadline = new Date().getTime() + 10000;
+export default class ProgressBar extends React.Component {
+    constructor() {
+        super(props);
+        this.intervalId = null;
+        this.state = {
+            width: 100,
+            color: "green"
+        };
+    }
 
-        let x = setInterval(() => {
-            let now = new Date().getTime();
-            let t = deadline - now;
-            let seconds = Math.floor((t % (1000 * 60)) / 1000);
-            if (seconds <= 0) {
-
-                // alert('Timer Completed, Its '+new Date(stringTime).toLocaleTimeString()+" now");
-                clearInterval(x);
-                setwidth(100);
-                setBackgroundColor("green")
-                if (typeof props.moveToNextQuestion === 'function') {
-                    props.moveToNextQuestion();
+    componentDidMount() {
+        let countDown = 100;
+        this.intervalId = setInterval(() => {
+            if (this.props.questionAnswered) {
+                clearInterval(this.intervalId)
+            }
+            if (countDown === 0) {
+                clearInterval(this.intervalId)
+                if (typeof this.props.moveToNextQuestion === 'function') {
+                    this.props.moveToNextQuestion();
                 }
             }
-            if (seconds >= 6) {
-                setBackgroundColor("green")
+            if (countDown < 40) {
+                this.setState({color: "red"})
             }
-            if (seconds < 6&& seconds!==0) {
-                setBackgroundColor("red")
-            }
-            console.log(seconds);
-            if(seconds!==0)
-            setwidth(10 * seconds)
-        }, 1000);
-    }
-    useEffect(startProgressBar, [props.queIndex])
-    return (
-        <div className={"progressBar"}>
-            <div className="progress" style={{width: width + "%", background: backgroundColor}}>
+            countDown = countDown - 1;
+            this.setState({width: countDown})
 
-                {width}
+        }, 100)
+    }
+
+    componentWillUnmount() {
+        //to be executed when component unmounts
+        clearInterval(this.intervalId);
+    }
+
+    render() {
+        return (
+            <div className={"progressBar"}>
+                <div className="progress" style={{width: this.state.width + "%", background: this.state.color}}>
+
+                    {this.state.width}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
