@@ -11,27 +11,29 @@ export default function ProgressBar(props) {
         let x = setInterval(() => {
             let now = new Date().getTime();
             let t = deadline - now;
-            let days = Math.floor(t / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((t % (1000 * 60)) / 1000);
             if (seconds <= 0) {
 
                 // alert('Timer Completed, Its '+new Date(stringTime).toLocaleTimeString()+" now");
                 clearInterval(x);
-                setwidth(0);
+                setwidth(100);
+                setBackgroundColor("green")
                 if (typeof props.moveToNextQuestion === 'function') {
                     props.moveToNextQuestion();
                 }
             }
-            if (seconds < 6) {
+            if (seconds >= 6) {
+                setBackgroundColor("green")
+            }
+            if (seconds < 6&& seconds!==0) {
                 setBackgroundColor("red")
             }
             console.log(seconds);
+            if(seconds!==0)
             setwidth(10 * seconds)
         }, 1000);
     }
-    useEffect(startProgressBar, [])
+    useEffect(startProgressBar, [props.queIndex])
     return (
         <div className={"progressBar"}>
             <div className="progress" style={{width: width + "%", background: backgroundColor}}>
