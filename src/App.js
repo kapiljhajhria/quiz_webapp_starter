@@ -12,13 +12,8 @@ function App() {
                 <Router>
                     <Switch>
                         <Route exact path="/quiz_webapp_starter/result" component={Result}/>
-                        <Route path="/quiz_webapp_starter">
-                            <Quiz/>
-                        </Route>
-                        <Route path="/">
-                            <Quiz/>
-                        </Route>
-
+                        <Route path="/quiz_webapp_starter" component={Quiz}/>
+                        <Route path="/" component={Quiz}/>
                     </Switch>
                 </Router>
 
