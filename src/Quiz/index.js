@@ -108,8 +108,7 @@ class Quiz extends React.Component {
     }
 
     render() {
-        if (this.state.currentQuestionIndex < this.questions.length - 1)
-            this.question = this.questions[this.state.currentQuestionIndex];
+        this.question = this.questions[this.state.currentQuestionIndex];
         return (
             <div className="header">
                 <div className="score">Score: {this.state.score}</div>
