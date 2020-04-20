@@ -3,7 +3,6 @@ import Question from "../Question";
 import Option from "../Option";
 import './styles.css';
 import ProgressBar from "../ProgressBar";
-import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -29,26 +28,26 @@ class Quiz extends React.Component {
             'options': ['Chandigarh', 'Bhubaneshwar', 'Tripura', 'Nagaland'],
             'correct_choice': 1
         },
-        // {
-        //     'text': "In the context to India's wild life, the flying fox is a __?",
-        //     'options': ['Bat', 'Vulture', 'Stok', 'Kite'],
-        //     'correct_choice': 0
-        // },
-        // {
-        //     'text': 'What percentage of land area should remain covered by forest to maintain Ecological balance?',
-        //     'options': ['10%', '33%', '5%', 'None of these'],
-        //     'correct_choice': 1
-        // },
-        // {
-        //     'text': ' The purest form of iron is',
-        //     'options': ['Wrought iron', 'Steel', 'Pig iron', 'Nickel steel'],
-        //     'correct_choice': 0
-        // },
-        // {
-        //     'text': 'Layer of atmosphere in which Ozone layer lies is',
-        //     'options': ['Exosphere', 'Mesosphere', 'Troposphere', 'Stratosphere'],
-        //     'correct_choice': 3
-        // },
+        {
+            'text': "In the context to India's wild life, the flying fox is a __?",
+            'options': ['Bat', 'Vulture', 'Stok', 'Kite'],
+            'correct_choice': 0
+        },
+        {
+            'text': 'What percentage of land area should remain covered by forest to maintain Ecological balance?',
+            'options': ['10%', '33%', '5%', 'None of these'],
+            'correct_choice': 1
+        },
+        {
+            'text': ' The purest form of iron is',
+            'options': ['Wrought iron', 'Steel', 'Pig iron', 'Nickel steel'],
+            'correct_choice': 0
+        },
+        {
+            'text': 'Layer of atmosphere in which Ozone layer lies is',
+            'options': ['Exosphere', 'Mesosphere', 'Troposphere', 'Stratosphere'],
+            'correct_choice': 3
+        },
     ];
 
 
