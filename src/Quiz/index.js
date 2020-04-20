@@ -3,7 +3,7 @@ import Question from "../Question";
 import Option from "../Option";
 import './styles.css';
 import ProgressBar from "../ProgressBar";
-
+import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 
 class Quiz extends React.Component {
     state = {
