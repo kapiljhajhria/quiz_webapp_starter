@@ -16,7 +16,7 @@ class Quiz extends React.Component {
 
         }
     }
-
+    userAnswer=[];
     questions = [
         {
             'text': "Who is current PM of India?",
@@ -52,6 +52,7 @@ class Quiz extends React.Component {
 
 
     selectThis = (id) => {
+        this.userAnswer.push(id);
 
         console.log("clicked some option");
         if (!this.state.questionAnswered) {
@@ -76,6 +77,8 @@ class Quiz extends React.Component {
                             pathname: "/quiz_webapp_starter/result",
                             state: {
                                 score: newScore,
+                                questionsList:this.questions,
+                                userAnswers:this.userAnswer,
                             }
                         }
                     )
@@ -93,13 +96,18 @@ class Quiz extends React.Component {
     question;
 
     moveToNextQuestion() {
+        this.userAnswer.push(-1);
         let copyCurrentQuestionIndex = this.state.currentQuestionIndex;
         if (copyCurrentQuestionIndex < this.questions.length - 1)
             copyCurrentQuestionIndex = copyCurrentQuestionIndex + 1;
         else if (copyCurrentQuestionIndex === this.questions.length - 1) {
             this.props.history.push({
                 pathname: "/quiz_webapp_starter/result",
-
+                state:{
+                    score:this.state.score,
+                    questionsList:this.questions,
+                    userAnswers:this.userAnswer,
+                }
             })
         }
         this.setState({
