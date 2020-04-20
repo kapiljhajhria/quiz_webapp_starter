@@ -16,7 +16,8 @@ class Quiz extends React.Component {
 
         }
     }
-    userAnswer=[];
+
+    userAnswer = [];
     questions = [
         {
             'text': "Who is current PM of India?",
@@ -73,12 +74,21 @@ class Quiz extends React.Component {
 
             setTimeout(() => {
                 if (copyCurrentQuestionIndex === this.questions.length) {
+                    let resultMapList = [];
+                    this.userAnswer.map((value, index) => {
+                        let correctAnswer = this.questions[index].options[this.questions[index].correct_choice];
+                        let userAnswer = value !== -1 ? this.questions[index].options[value] : "time out";
+                        resultMapList.push({
+                            que: this.questions[index]["text"],
+                            userAnswer: userAnswer,
+                            correctAnswer: correctAnswer,
+                        });
+                    });
                     this.props.history.push({
                             pathname: "/quiz_webapp_starter/result",
                             state: {
                                 score: newScore,
-                                questionsList:this.questions,
-                                userAnswers:this.userAnswer,
+                                resultMapList: resultMapList
                             }
                         }
                     )
@@ -101,12 +111,21 @@ class Quiz extends React.Component {
         if (copyCurrentQuestionIndex < this.questions.length - 1)
             copyCurrentQuestionIndex = copyCurrentQuestionIndex + 1;
         else if (copyCurrentQuestionIndex === this.questions.length - 1) {
+            let resultMapList = [];
+            this.userAnswer.map((value, index) => {
+                let correctAnswer = this.questions[index].options[this.questions[index].correct_choice];
+                let userAnswer = value !== -1 ? this.questions[index].options[value] : "time out";
+                resultMapList.push({
+                    que: this.questions[index]["text"],
+                    userAnswer: userAnswer,
+                    correctAnswer: correctAnswer,
+                });
+            });
             this.props.history.push({
                 pathname: "/quiz_webapp_starter/result",
-                state:{
-                    score:this.state.score,
-                    questionsList:this.questions,
-                    userAnswers:this.userAnswer,
+                state: {
+                    score: this.state.score,
+                    resultMapList: resultMapList
                 }
             })
         }
