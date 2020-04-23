@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './styles.css';
 import Confetti from 'react-dom-confetti';
 
@@ -7,7 +7,7 @@ export default function Option(props) {
     return (
 
         <div onClick={() => {
-            clearInterval(1+props.queIndex);
+            // clearInterval(1+props.queIndex);
             props.clicked(props.id);
         }}
 

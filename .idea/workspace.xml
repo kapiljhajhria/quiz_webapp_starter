@@ -19,14 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dbf23a4-8187-4387-8990-bdbde095f535" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Result/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Result/styles.css" afterDir="false" />
+    <list default="true" id="9dbf23a4-8187-4387-8990-bdbde095f535" name="Default Changelist" comment="quiz working, moving o result page as well">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quiz/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Option/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Result/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Result/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +94,11 @@
       <workItem from="1587096906830" duration="5262000" />
       <workItem from="1587103363751" duration="6297000" />
       <workItem from="1587112999028" duration="664000" />
-      <workItem from="1587355211653" duration="1365000" />
+      <workItem from="1587355211653" duration="9111000" />
+      <workItem from="1587370644297" duration="633000" />
+      <workItem from="1587464680034" duration="2681000" />
+      <workItem from="1587529782420" duration="3628000" />
+      <workItem from="1587652618798" duration="417000" />
     </task>
     <task id="LOCAL-00001" summary="printing option text onclicking div">
       <created>1587012115162</created>
@@ -232,7 +233,56 @@
       <option name="project" value="LOCAL" />
       <updated>1587113462588</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="routes added&#10;dummy result component added&#10;can move to result page from browser address bar">
+      <created>1587356648486</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1587356648486</updated>
+    </task>
+    <task id="LOCAL-00021" summary="move to next question when you answer last question or let last question timeout">
+      <created>1587359476293</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1587359476293</updated>
+    </task>
+    <task id="LOCAL-00022" summary="quiz working, moving o result page as well">
+      <created>1587359976163</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1587359976163</updated>
+    </task>
+    <task id="LOCAL-00023" summary="able to get all needed data on results page">
+      <created>1587361508653</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1587361508653</updated>
+    </task>
+    <task id="LOCAL-00024" summary="getting correct output on result page&#10;&#10;todo: html css part in displaying the data">
+      <created>1587363175141</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1587363175141</updated>
+    </task>
+    <task id="LOCAL-00025" summary="day 121 task completed.&#10;&#10;&#10;todo: css fixes">
+      <created>1587364679774</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1587364679774</updated>
+    </task>
+    <task id="LOCAL-00026" summary="using map to render options">
+      <created>1587652959968</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1587652959968</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,73 +317,83 @@
     <MESSAGE value="moving to next question when timer ends" />
     <MESSAGE value="progress bar working, going to next question&#10;&#10;todo: stop interval if you answer any question" />
     <MESSAGE value="task completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="task completed" />
+    <MESSAGE value="routes added&#10;dummy result component added&#10;can move to result page from browser address bar" />
+    <MESSAGE value="move to next question when you answer last question or let last question timeout" />
+    <MESSAGE value="quiz working, moving o result page as well" />
+    <MESSAGE value="able to get all needed data on results page" />
+    <MESSAGE value="getting correct output on result page&#10;&#10;todo: html css part in displaying the data" />
+    <MESSAGE value="day 121 task completed.&#10;&#10;&#10;todo: css fixes" />
+    <MESSAGE value="using map to render options" />
+    <option name="LAST_COMMIT_MESSAGE" value="using map to render options" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="419" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587010837905">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="419" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1587010837905" />
-    <state x="622" y="52" key="CommitChangelistDialog2" timestamp="1587113462402">
+    <state x="622" y="52" key="CommitChangelistDialog2" timestamp="1587652959896">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="622" y="52" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1587113462402" />
+    <state x="622" y="52" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1587652959896" />
     <state x="798" y="266" key="EnvironmentVariablesDialog" timestamp="1587010834581">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="798" y="266" key="EnvironmentVariablesDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1587010834581" />
-    <state width="1870" height="206" key="GridCell.Tab.0.bottom" timestamp="1587356460401">
+    <state width="1870" height="206" key="GridCell.Tab.0.bottom" timestamp="1587652850660">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460401" />
-    <state width="1870" height="206" key="GridCell.Tab.0.center" timestamp="1587356460401">
+    <state width="1870" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850660" />
+    <state width="1870" height="206" key="GridCell.Tab.0.center" timestamp="1587652850659">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460401" />
-    <state width="1870" height="206" key="GridCell.Tab.0.left" timestamp="1587356460401">
+    <state width="1870" height="206" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850659" />
+    <state width="1870" height="206" key="GridCell.Tab.0.left" timestamp="1587652850659">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460401" />
-    <state width="1870" height="206" key="GridCell.Tab.0.right" timestamp="1587356460401">
+    <state width="1870" height="206" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850659" />
+    <state width="1870" height="206" key="GridCell.Tab.0.right" timestamp="1587652850660">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460401" />
-    <state width="1870" height="206" key="GridCell.Tab.1.bottom" timestamp="1587356460402">
+    <state width="1870" height="206" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850660" />
+    <state width="1870" height="206" key="GridCell.Tab.1.bottom" timestamp="1587652850661">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.1.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460402" />
-    <state width="1870" height="206" key="GridCell.Tab.1.center" timestamp="1587356460402">
+    <state width="1870" height="206" key="GridCell.Tab.1.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850661" />
+    <state width="1870" height="206" key="GridCell.Tab.1.center" timestamp="1587652850661">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.1.center/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460402" />
-    <state width="1870" height="206" key="GridCell.Tab.1.left" timestamp="1587356460401">
+    <state width="1870" height="206" key="GridCell.Tab.1.center/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850661" />
+    <state width="1870" height="206" key="GridCell.Tab.1.left" timestamp="1587652850661">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.1.left/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460401" />
-    <state width="1870" height="206" key="GridCell.Tab.1.right" timestamp="1587356460402">
+    <state width="1870" height="206" key="GridCell.Tab.1.left/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850661" />
+    <state width="1870" height="206" key="GridCell.Tab.1.right" timestamp="1587652850661">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.1.right/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460402" />
-    <state width="1870" height="206" key="GridCell.Tab.2.bottom" timestamp="1587356460403">
+    <state width="1870" height="206" key="GridCell.Tab.1.right/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850661" />
+    <state width="1870" height="206" key="GridCell.Tab.2.bottom" timestamp="1587652850662">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.2.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460403" />
-    <state width="1870" height="206" key="GridCell.Tab.2.center" timestamp="1587356460402">
+    <state width="1870" height="206" key="GridCell.Tab.2.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850662" />
+    <state width="1870" height="206" key="GridCell.Tab.2.center" timestamp="1587652850661">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.2.center/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460402" />
-    <state width="1870" height="206" key="GridCell.Tab.2.left" timestamp="1587356460402">
+    <state width="1870" height="206" key="GridCell.Tab.2.center/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850661" />
+    <state width="1870" height="206" key="GridCell.Tab.2.left" timestamp="1587652850661">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.2.left/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460402" />
-    <state width="1870" height="206" key="GridCell.Tab.2.right" timestamp="1587356460403">
+    <state width="1870" height="206" key="GridCell.Tab.2.left/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850661" />
+    <state width="1870" height="206" key="GridCell.Tab.2.right" timestamp="1587652850662">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state width="1870" height="206" key="GridCell.Tab.2.right/0.0.1920.1044@0.0.1920.1044" timestamp="1587356460403" />
-    <state x="828" y="260" key="Vcs.Push.Dialog.v2" timestamp="1587113464349">
+    <state width="1870" height="206" key="GridCell.Tab.2.right/0.0.1920.1044@0.0.1920.1044" timestamp="1587652850662" />
+    <state x="828" y="260" key="Vcs.Push.Dialog.v2" timestamp="1587652961131">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="828" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1587113464349" />
+    <state x="828" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1587652961131" />
     <state x="729" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587010930961">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>

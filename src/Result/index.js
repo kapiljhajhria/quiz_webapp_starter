@@ -16,7 +16,7 @@ export default function Result(props) {
                 <thead>
                 <tr>
                     <th>Question</th>
-                    <th>User Answer</th>
+                    <th>User Answers</th>
                     <th>Correct Answer</th>
                 </tr>
                 </thead>
