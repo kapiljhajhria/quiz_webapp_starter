@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import Quiz from "./Quiz";
 import Result from "./Result";
-import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
+            {/*<header className="App-header">*/}
                 <Router>
                     <Switch>
                         <Route exact path="/quiz_webapp_starter/result" component={Result}/>
@@ -17,7 +17,7 @@ function App() {
                     </Switch>
                 </Router>
 
-            </header>
+            {/*</header>*/}
         </div>
 
     );

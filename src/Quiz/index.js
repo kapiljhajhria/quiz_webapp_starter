@@ -2,7 +2,6 @@ import React from "react";
 import Question from "../Question";
 import Option from "../Option";
 import './styles.css';
-import ProgressBar from "../ProgressBar";
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -19,34 +18,34 @@ class Quiz extends React.Component {
     userAnswer = [];
     questions = [
         {
-            'text': "Who is current PM of India?",
-            'options': ['Narendra Modi', 'Rahul Gandhi', 'Manmohan Singh', 'Sonia Gandhi'],
+            'text': "Did you exercise today?",
+            'options': ["Yes", "No"],
             'correct_choice': 0
         },
         {
-            'text': "What is capital of Orissa?",
-            'options': ['Chandigarh', 'Bhubaneshwar', 'Tripura', 'Nagaland'],
+            'text': "Did you sleep well last night?",
+            'options': ["Yes", "No"],
+            'correct_choice': 0
+        },
+        {
+            'text': "Did you drink alcohol?",
+            'options': ["Yes", "No"],
             'correct_choice': 1
         },
         {
-            'text': "In the context to India's wild life, the flying fox is a __?",
-            'options': ['Bat', 'Vulture', 'Stok', 'Kite'],
+            'text': 'Did you eat well?',
+            'options': ["Yes", "No"],
             'correct_choice': 0
         },
         {
-            'text': 'What percentage of land area should remain covered by forest to maintain Ecological balance?',
-            'options': ['10%', '33%', '5%', 'None of these'],
-            'correct_choice': 1
-        },
-        {
-            'text': ' The purest form of iron is',
-            'options': ['Wrought iron', 'Steel', 'Pig iron', 'Nickel steel'],
+            'text': 'Were you productive?',
+            'options': ["Yes", "No"],
             'correct_choice': 0
         },
         {
-            'text': 'Layer of atmosphere in which Ozone layer lies is',
-            'options': ['Exosphere', 'Mesosphere', 'Troposphere', 'Stratosphere'],
-            'correct_choice': 3
+            'text': 'Did you spend time with friends?',
+            'options': ["Yes", "No"],
+            'correct_choice': 0
         },
     ];
 
@@ -54,7 +53,7 @@ class Quiz extends React.Component {
     selectThis = (id) => {
         this.userAnswer.push(id);
 
-        console.log("clicked some option");
+        console.debug("clicked some option");
         if (!this.state.questionAnswered) {
 
             let copyCurrentQuestionIndex = this.state.currentQuestionIndex;
@@ -146,9 +145,6 @@ class Quiz extends React.Component {
                                 clicked={this.selectThis} selected={this.state.selectedOption === idx}/>
                     ))}
                 </div>
-                <ProgressBar key={this.state.currentQuestionIndex} questionAnswered={this.state.questionAnswered}
-                             moveToNextQuestion={() => this.moveToNextQuestion()}
-                             queIndex={this.state.currentQuestionIndex}/>
             </div>
         );
     }
